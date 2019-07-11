@@ -45,12 +45,10 @@ $(function() {
         });
         //Esse teste garante que o menu torne-se visível e oculto quando é acionado
         it('Click no menu', function(){
-            let exibeMenu = $('.menu-icon-link').click();
-            let ocultaMenu = $('.menu-icon-link').click();
-            expect(exibeMenu).toBeDefined();
-            expect(ocultaMenu).toBeDefined();
-            expect(exibeMenu.length).toBe(1);
-            expect(ocultaMenu.length).toBe(1);
+            $('.menu-icon-link').click();
+            expect(document.body).not.toHaveClass('menu-hidden');
+            $('.menu-icon-link').click();            
+            expect(document.body).toHaveClass('menu-hidden');
         });
 
     });

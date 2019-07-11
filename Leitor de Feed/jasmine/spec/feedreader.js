@@ -64,7 +64,7 @@ $(function() {
         });
 
         it('link existente', (function(){
-            let link = $('.tpl-entry');
+            let link = $('.feed .entry');
             expect(link).toBeDefined();
             expect(link.length).toBeGreaterThan(0);
             console.log(link.length);
